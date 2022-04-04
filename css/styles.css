@@ -22,3 +22,19 @@ body {
     color: var(--primary-text-color);
 }
 
+/* Шапка проекта */
+.logo {
+color: #000000;
+}
+
+.logo:hover {
+color: var(--accent-color);
+}
+
+.logo:focus {
+color: #000000
+}
+
+.logo-accent {
+color: var(--accent-color);
+    }
