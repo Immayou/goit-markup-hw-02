@@ -1,38 +1,40 @@
-/* основной цвет фона #E5E5E5  
-цвет фона для футера #2F303A
-цвет фона для шапки #FFFFFF
-дополнительный цвет фона #F5F4FA
-цвет акцент #2196F3
-основной цвет текста #757575
-цвет заголовков #212121
-донительный цвет текста #FFFFFF
-цвет лого #000000  */
 
 :root {
-    --primary-background-color: #E5E5E5;
-    --secondary-background-color: #F5F4FA;
-    --primary-text-color: #757575;
-    --secondary-text-color: #FFFFFF;
+    --header-background-color: #FFFFFF;
+    --about-company-bcg-color: #E5E5E5;
+    --team-background-color: #F5F4FA;
+    --hero-background-color: #2F303A;
+    --footer-background-color: #2F303A;
     --accent-color: #2196F3;
-    --logo-color: #000000
+    --logo-color: #000;
+    --header-nav-text-color: #212121;
+    --hero-text-color: #FFFFFF;
+    --hero-btn-text-color: #FFFFFF;
+    --properties-title-color: #212121;
+    --properties-text-color: #757575;
+    --work-title-coclor: #212121;
+    --team-name-color: #212121;
+    --team-position-color: #757575;
+    --footer-text-color: #FFFFFF;
    }
 
 body {
-    background-color: var(--primary-background-color);
-    color: var(--primary-text-color);
+    background-color: var(--about-company-color);
+    color: var(--properties-text-color);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
+----------/* Шапка проекта */-------
 
-/* Шапка проекта */
 .logo {
 color: var(--logo-color);
-
 font-family: 'Raleway', sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
 letter-spacing: 0.03em;
+border: 1px solid #000000;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .list {
@@ -55,10 +57,55 @@ color: #000000
 color: var(--accent-color);
 }
 
-.head-list {
-   
+.head {
+background-color: var(--header-background-color);
+}
+
+/* студия */
+.header-item {
+color: var(--accent-color);
 font-weight: 500;
 font-size: 14px;
-line-hight: 1.19; 
+line-height: 1.14;
 letter-spacing: 0.02em;
+}
+
+/* контакты
+.header-item {
+color: var(--header-nav-text-color); 
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+}
+
+/* портфолио */
+/* .header-item {
+color: var(--header-nav-text-color); 
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+0px 4px 4px rgba(0, 0, 0, 0.25);
+} */ */
+
+.btn-item {
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;    
+}
+
+------Герой-----
+.hero-title {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: 44px;
+line-height: 13.6;
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: var(--hero-text-color);
 }
