@@ -28,7 +28,6 @@
 
 body {
     font-family: 'Roboto', 'Tahoma', sans-serif;
-    font-weight: 400;
     letter-spacing: 0.03em;
 
     background-color: var(--main-bcg-color);
@@ -133,6 +132,11 @@ background-color: var(--accent-color);
 .hero-btn:focus {
 color: var(--accent-color);
 background-color: #FFFFFF;
+}
+
+.hero-btn,
+.examples-btn-item {
+cursor: pointer;
 }
 
 /* преимущества компании */
