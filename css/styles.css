@@ -27,11 +27,12 @@
    }
 
 body {
-    background-color: var(--main-bcg-color);
-    color: var(--properties-text-color);
     font-family: 'Roboto', 'Tahoma', sans-serif;
     font-weight: 400;
     letter-spacing: 0.03em;
+
+    background-color: var(--main-bcg-color);
+    color: var(--properties-text-color);
 }
 
 /* шапка */
@@ -46,11 +47,12 @@ text-decoration: none;
 
 .logo,
 .logo-secondary {
-color: var(--logo-primary-color);
 font-family: 'Raleway', sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
+
+color: var(--logo-primary-color);
 }
 
 .logo-primary-accent,
@@ -89,14 +91,8 @@ letter-spacing: 0.02em;
 }
 
 .head-item:hover,
-.head-item:focus {
-color: var(--accent-color);
-}
-
-.head-item.current {
-color: var(--accent-color);
-}
-
+.head-item:focus,
+.head-item.current,
 .btn-item:hover,
 .btn-item:focus {
 color: var(--accent-color);
@@ -115,6 +111,7 @@ line-height: 1.36;
 text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
+
 color: var(--hero-text-color);
 }
 
@@ -127,13 +124,15 @@ display: flex;
 align-items: center;
 text-align: center;
 letter-spacing: 0.06em;
+
 color: var(--hero-btn-text-color);
 background-color: var(--accent-color);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-color: #000000
+color: var(--accent-color);
+background-color: #FFFFFF;
 }
 
 /* преимущества компании */
@@ -143,6 +142,7 @@ font-weight: 700;
 font-size: 14px;
 line-height: 1.14;
 text-transform: uppercase;
+
 color: var(--properties-title-color);
 }
 
@@ -158,6 +158,7 @@ line-height: 1.71;
 font-size: 36px;
 line-height: 1.17;
 text-align: center;
+
 color: var(--work-title-color);
 }
 
@@ -176,6 +177,7 @@ text-align: center;
 
 .team-name {
 font-weight: 500;
+
 color: var(--team-top-text-color);
 }
 
@@ -197,9 +199,15 @@ color: var(--logo-secondary-color);
 color: var(--accent-color);
 }
 
+.logo-secondary:hover,
+.logo-secondary:focus {
+color: var(--accent-color);
+}
+
 .footer-item {
 font-size: 14px;
 line-height: 1.71;
+
 color: var(--footer-main-text-colortext-color);
 }
 
@@ -226,6 +234,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.62;
 text-align: center;
+
 color: var(--portfolio-title-text-color);
 background-color: var(--portfolio-btn-bcg-color);
 }
@@ -246,11 +255,13 @@ background-color: var(--accent-color);
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
+
 color: var(--portfolio-title-text-color);
 }
 
 .examples-text {
 font-size: 16px;
 line-height: 1.88x;
+
 color: var(--portfolio-main-text-color);
 }
