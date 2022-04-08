@@ -16,6 +16,10 @@
     --team-top-text-color: #212121;
     --team-bottom-text-color: #757575;
     --footer-text-color: #FFFFFF;
+    --portfolio-bcg-color: #E5E5E5;
+    --portfolio-title-text-color: #212121;
+    --portfolio-btn-text-color: #212121;
+    --portfolio-main-text-color: #757575;
    }
 
 body {
@@ -198,7 +202,7 @@ font-style: normal;
 
 /* Страница Портфолио */
 
-.btn-item {
+.examples-btn-item {
 font-family: inherit;
 font-weight: 500;
 font-size: 16px;
@@ -207,15 +211,26 @@ text-align: center;
 color: #212121
 }
 
-.example-title {
+.examples-btn-item:hover,
+.examples-btn-item:focus {
+color: #FFFFFF;
+background-color: var(--accent-color);
+}
+
+.examples-link:hover,
+.examples-link:focus {
+background-color: var(--accent-color);
+}
+
+.examples-title {
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
-color: #212121;
+color: var(--portfolio-title-text-color);
 }
 
-.example-text {
+.examples-text {
 font-size: 16px;
 line-height: 1.88x;
-color: #757575;
+color: var(--portfolio-main-text-color);
 }
