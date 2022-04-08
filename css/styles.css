@@ -1,13 +1,15 @@
 
 :root {
     --head-background-color: #FFFFFF;
-    --about-company-bcg-color: #E5E5E5;
+    --main-bcg-color: #E5E5E5;
     --team-background-color: #F5F4FA;
     --hero-background-color: #2F303A;
     --footer-background-color: #2F303A;
     --accent-color: #2196F3;
-    --logo-color: #000;
+    --logo-primary-color: #000;
+    --logo-secondary-color: #FFFFFF;
     --header-nav-text-color: #212121;
+    --header-btn-text-color: #757575;
     --hero-text-color: #FFFFFF;
     --hero-btn-text-color: #FFFFFF;
     --properties-title-color: #212121;
@@ -15,20 +17,24 @@
     --work-title-color: #212121;
     --team-top-text-color: #212121;
     --team-bottom-text-color: #757575;
-    --footer-text-color: #FFFFFF;
+    --footer-main-text-color: #FFFFFF;
+    --footer-secondary-text-color: rgba(255, 255, 255, 0.6);
     --portfolio-bcg-color: #E5E5E5;
     --portfolio-title-text-color: #212121;
     --portfolio-btn-text-color: #212121;
+    --portfolio-btn-bcg-color: #F5F4FA;
     --portfolio-main-text-color: #757575;
    }
 
 body {
-    background-color: var(--about-company-bcg-color);
+    background-color: var(--main-bcg-color);
     color: var(--properties-text-color);
     font-family: 'Roboto', 'Tahoma', sans-serif;
     font-weight: 400;
     letter-spacing: 0.03em;
 }
+
+/* шапка */
 
 .link {
 text-decoration: none;
@@ -40,26 +46,21 @@ text-decoration: none;
 
 .logo,
 .logo-secondary {
-color: var(--logo-color);
+color: var(--logo-primary-color);
 font-family: 'Raleway', sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
 }
 
-.logo {
-border: 1px solid #000000;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.logo-accent,
+.logo-primary-accent,
 .logo-secondary-accent {
 color: var(--accent-color);
 }
 
-.logo-accent:hover, 
-.logo-accent:focus {
-color: var(--logo-color)
+.logo-primary-accent:hover, 
+.logo-primary-accent:focus {
+color: var(--logo-color);
 }
 
 .logo:hover, 
@@ -68,37 +69,31 @@ color: var(--accent-color);
 }
 
 .head {
-background-color: var(--head-background-color)
+background-color: var(--head-background-color);
 }
 
-.head-item-first,
-.head-item-second,
-.head-item-thrird,
-.btn-item {
+.head-item {
 color: var(--header-nav-text-color);
+}
+
+.btn-item {
+color: var(--header-btn-text-color);
+}
+
+.head-item,
+.btn-item {
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;  
 }
 
-.head-item-first:hover,
-.head-item-first:focus {
+.head-item:hover,
+.head-item:focus {
 color: var(--accent-color);
 }
 
-.head-item-second {
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
-0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.head-item-second:hover,
-.head-item-second:focus {
-color: var(--accent-color);
-}
-
-.head-item-thrird:hover,
-.head-item-third:focus {
+.head-item.current {
 color: var(--accent-color);
 }
 
@@ -106,6 +101,8 @@ color: var(--accent-color);
 .btn-item:focus {
 color: var(--accent-color);
 }
+
+/* герой */
 
 .hero {
 background-color: var(--hero-background-color);
@@ -139,6 +136,8 @@ background-color: var(--accent-color);
 color: #000000
 }
 
+/* преимущества компании */
+
 .properties-title {
 font-weight: 700;
 font-size: 14px;
@@ -152,6 +151,8 @@ font-size: 14px;
 line-height: 1.71;
 }
 
+/* чем мы занимаемся */
+
 .work-title,
 .team-title {
 font-size: 36px;
@@ -159,6 +160,8 @@ line-height: 1.17;
 text-align: center;
 color: var(--work-title-color);
 }
+
+/* наша команда */
 
 .team {
 background-color: var(--team-background-color);
@@ -177,23 +180,38 @@ color: var(--team-top-text-color);
 }
 
 .team-text {
-font-weight: 400;
 color: var(--team-bottom-text-color);
 }
+
+/* футер */
 
 .footer {
 background-color: var(--footer-background-color);
 }
 
+.logo-secondary {
+color: var(--logo-secondary-color);
+}
+
+.logo-secondary-accent {
+color: var(--accent-color);
+}
+
 .footer-item {
 font-size: 14px;
 line-height: 1.71;
-color: var(--footer-text-color);
+color: var(--footer-main-text-colortext-color);
 }
 
+.footer-item-address:hover,
+.footer-item-address:focus,
 .footer-item:hover,
 .footer-item:focus {
 color: var(--accent-color);
+}
+
+.footer-item-address {
+color: var(--footer-secondary-text-color);
 }
 
 address {
@@ -208,11 +226,13 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.62;
 text-align: center;
-color: #212121
+color: var(--portfolio-title-text-color);
+background-color: var(--portfolio-btn-bcg-color);
 }
 
 .examples-btn-item:hover,
-.examples-btn-item:focus {
+.examples-btn-item:focus,
+.examples-btn-item.current {
 color: #FFFFFF;
 background-color: var(--accent-color);
 }
