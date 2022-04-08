@@ -1,6 +1,6 @@
 
 :root {
-    --header-background-color: #FFFFFF;
+    --head-background-color: #FFFFFF;
     --about-company-bcg-color: #E5E5E5;
     --team-background-color: #F5F4FA;
     --hero-background-color: #2F303A;
@@ -12,19 +12,27 @@
     --hero-btn-text-color: #FFFFFF;
     --properties-title-color: #212121;
     --properties-text-color: #757575;
-    --work-title-coclor: #212121;
-    --team-name-color: #212121;
-    --team-position-color: #757575;
+    --work-title-color: #212121;
+    --team-top-text-color: #212121;
+    --team-bottom-text-color: #757575;
     --footer-text-color: #FFFFFF;
    }
 
 body {
-    background-color: var(--about-company-color);
+    background-color: var(--about-company-bcg-color);
     color: var(--properties-text-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Tahoma', sans-serif;
     font-weight: 400;
+    letter-spacing: 0.03em;
 }
-----------/* Шапка проекта */-------
+
+.link {
+text-decoration: none;
+}
+
+.list {
+ list-style: none;   
+}
 
 .logo {
 color: var(--logo-color);
@@ -32,80 +40,157 @@ font-family: 'Raleway', sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
-letter-spacing: 0.03em;
 border: 1px solid #000000;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.list {
- list-style: none;   
-}
-
-.link {
-text-decoration: none;
-}
-
-.logo:hover {
-color: var(--accent-color);
-}
-
-.logo:focus {
-color: #000000
 }
 
 .logo-accent {
 color: var(--accent-color);
 }
 
-.head {
-background-color: var(--header-background-color);
+.logo-accent:hover, 
+.logo-accent:focus {
+color: var(--logo-color)
 }
 
-/* студия */
-.header-item {
+.logo:hover, 
+.logo:focus {
 color: var(--accent-color);
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
 }
 
-/* контакты
-.header-item {
-color: var(--header-nav-text-color); 
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;
+.head {
+background-color: var(--head-background-color)
 }
 
-/* портфолио */
-/* .header-item {
-color: var(--header-nav-text-color); 
+.head-item-first,
+.head-item-second,
+.head-item-thrird,
+.btn-item {
+color: var(--header-nav-text-color);
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
-letter-spacing: 0.02em;
+letter-spacing: 0.02em;  
+}
+
+/* .head-item-first:current {
+    color: var(--accent-color); */
+}
+
+.head-item-first:hover,
+.head-item-first:focus {
+color: var(--accent-color);
+}
+
+.head-item-second {
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
 0px 4px 4px rgba(0, 0, 0, 0.25);
-} */ */
-
-.btn-item {
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.02em;    
 }
 
-------Герой-----
+.head-item-second:hover,
+.head-item-second:focus {
+color: var(--accent-color);
+}
+
+.head-item-thrird:hover,
+.head-item-third:focus {
+color: var(--accent-color);
+}
+
+.btn-item:hover,
+.btn-item:focus {
+color: var(--accent-color);
+}
+
+.hero {
+background-color: var(--hero-background-color);
+}
+
 .hero-title {
-font-family: 'Roboto';
-font-style: normal;
 font-weight: 900;
 font-size: 44px;
-line-height: 13.6;
+line-height: 1.36;
 text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 color: var(--hero-text-color);
+}
+
+.hero-btn {
+font-family: inherit;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: var(--hero-btn-text-color);
+background-color: var(--accent-color);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+color: #000000
+}
+
+.properties-title {
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+color: var(--properties-title-color);
+}
+
+.properties-text {
+font-size: 14px;
+line-height: 1.71;
+}
+
+.work-title,
+.team-title {
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+color: var(--work-title-color);
+}
+
+.team {
+background-color: var(--team-background-color);
+}
+
+.team-name,
+.team-text {
+font-size: 16px;
+line-height: 1.19;
+text-align: center;  
+}
+
+.team-name {
+font-weight: 500;
+color: var(--team-top-text-color);
+}
+
+.team-text {
+font-weight: 400;
+color: var(--team-bottom-text-color);
+}
+
+.footer {
+    background-color: var(--footer-background-color);
+}
+
+.footer-item {
+font-size: 14px;
+line-height: 1.71;
+color: var(--footer-text-color);
+}
+
+.footer-item:hover,
+.footer-item:focus {
+color: var(--accent-color);
+}
+
+address {
+font-style: normal;
 }
